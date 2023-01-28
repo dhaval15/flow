@@ -1,0 +1,39 @@
+#+TITLE: Flow
+* Flow
+
+The todo  apps has  major flaw:  either they  restrict to  you a
+specific timeline or  they do not.  So here  is the alternative:
+=Flow.=
+
+** Concepts
+
+*** Card
+
+- ~Card~ is a miniscule task that can not exceed 2 hour limit.
+- There are no states inprogress or anything else. Either you do
+  it or not.
+- There are states five states:
+  - today: supposed to be finished today.
+  - later:  for  now   it  means  week,  but   you  can  specify
+    differently in future
+  - indefinite:  here  anything that  is  not  priority (it's  a
+    treasure)
+  - scheduled: self-explanotory
+  - deadline: self-explanotory
+
+*** Flow
+Now above discuss  concept are nothing new and  hence here comes
+how it works
+
+- At the end  of the day, you finish the  day manually, if there
+  are any  cards(tasks), undone,  it will  notify you  to either
+  finish  it or,  replace it  with tasks  with similar  tags, or
+  manually replacing with other task whatever you want.
+- This specefic process above, allows  you to change the task if
+  doesn't works out.
+- The daily tasks are added  automatically after you finish your
+  day.
+- You will be prompted a task from indefinite daily, and you can
+  add it  today. (This  perticular process can  be customizable,
+  and based on recommendation system)
+
