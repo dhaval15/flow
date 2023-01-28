@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart' hide Card;
+
+import '../models/models.dart';
 import '../providers/providers.dart';
 import '../styles/utils.dart';
-import '../models/models.dart';
-import '../widgets/widgets.dart';
+import '../views/views.dart';
 import 'screens.dart';
 
 class ViewCardScreen extends StatefulWidget {

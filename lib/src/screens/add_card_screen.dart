@@ -1,3 +1,4 @@
+import '../styles/utils.dart';
 import 'package:flutter/material.dart' hide Card;
 
 import '../models/models.dart';
@@ -36,9 +37,8 @@ class _AddCardScreenState extends State<AddCardScreen> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+          child: CustomScrollView(
+            slivers: [
               TextField(
                 decoration: InputDecoration(
                   hintText: 'Title',
@@ -47,8 +47,8 @@ class _AddCardScreenState extends State<AddCardScreen> {
                 onChanged: (text) {
                   _card = _card.copyWith(title: text);
                 },
-              ),
-              const SizedBox(height: 16),
+              ).sliver,
+              const SizedBox(height: 16).sliver,
               FutureWhenBuilder<List<Tag>>(
                   future: provider.tags.first,
                   builder: (context, tags) {
@@ -63,33 +63,31 @@ class _AddCardScreenState extends State<AddCardScreen> {
                         _card = _card.copyWith(tags: tags.toList());
                       },
                     );
-                  }),
-              const SizedBox(height: 16),
-              Expanded(
-                child: TextField(
-								  expands: true,
-									maxLines:null,
-									minLines:null,
-									textAlignVertical: TextAlignVertical.top,
-                  decoration: InputDecoration(
-                    hintText: 'Content',
-										contentPadding: const EdgeInsets.all(8),
-                  ),
-                  controller: TextEditingController(text: _card.content),
-                  onChanged: (text) {
-                    _card = _card.copyWith(content: text);
-                  },
+                  }).sliver,
+              const SizedBox(height: 16).sliver,
+              TextField(
+                //expands: true,
+                maxLines: 16,
+                minLines: null,
+                textAlignVertical: TextAlignVertical.top,
+                decoration: InputDecoration(
+                  hintText: 'Content',
+                  contentPadding: const EdgeInsets.all(8),
                 ),
-              ),
-              const SizedBox(height: 16),
+                controller: TextEditingController(text: _card.content),
+                onChanged: (text) {
+                  _card = _card.copyWith(content: text);
+                },
+              ).sliver,
+              const SizedBox(height: 16).sliver,
               CardStateField(
                 label: 'State',
                 value: _card.state,
                 onChanged: (value) {
                   _card = _card.copyWith(state: value);
                 },
-              ),
-              const SizedBox(height: 16),
+              ).sliver,
+              const SizedBox(height: 16).sliver,
               OptionField<Effort>(
                 options: Effort.values,
                 builder: (value) => value.when(
@@ -102,8 +100,8 @@ class _AddCardScreenState extends State<AddCardScreen> {
                 onChanged: (value) {
                   _card = _card.copyWith(effort: value);
                 },
-              ),
-              const SizedBox(height: 16),
+              ).sliver,
+              const SizedBox(height: 16).sliver,
               ValidationInfoView(
                 controller: _controller,
                 builder: (_, error) => Text(
@@ -112,8 +110,8 @@ class _AddCardScreenState extends State<AddCardScreen> {
                     color: Colors.red,
                   ),
                 ),
-              ),
-              const SizedBox(height: 16),
+              ).sliver,
+              const SizedBox(height: 16).sliver,
               Align(
                 alignment: Alignment.centerRight,
                 child: MaterialButton(
@@ -123,8 +121,8 @@ class _AddCardScreenState extends State<AddCardScreen> {
                   },
                   child: Text('Save'),
                 ),
-              ),
-              const SizedBox(height: 16),
+              ).sliver,
+              const SizedBox(height: 32).sliver,
             ],
           ),
         ),
