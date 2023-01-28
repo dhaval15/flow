@@ -1,4 +1,3 @@
-#+TITLE: Flow
 * Flow
 
 The todo  apps has  major flaw:  either they  restrict to  you a
@@ -20,6 +19,7 @@ specific timeline or  they do not.  So here  is the alternative:
     treasure)
   - scheduled: self-explanotory
   - deadline: self-explanotory
+- There are three effors level : low, med and high
 
 *** Flow
 Now above discuss  concept are nothing new and  hence here comes
@@ -27,8 +27,9 @@ how it works
 
 - At the end  of the day, you finish the  day manually, if there
   are any  cards(tasks), undone,  it will  notify you  to either
-  finish  it or,  replace it  with tasks  with similar  tags, or
-  manually replacing with other task whatever you want.
+  finish it or, replace it with  tasks with similar tags as well
+  as  effort  level,  or  manually  replacing  with  other  task
+  whatever you want.
 - This specefic process above, allows  you to change the task if
   doesn't works out.
 - The daily tasks are added  automatically after you finish your
@@ -36,4 +37,13 @@ how it works
 - You will be prompted a task from indefinite daily, and you can
   add it  today. (This  perticular process can  be customizable,
   and based on recommendation system)
+- Effort level  in future will be  used to calculate or  load of
+  the day, and recommendation will be based on that metric
+
+*** Features
+It's in  beta part and  works perfectly,  but most of  the tasks
+=flow= is supposed to do, are still manual.
+- [ ] Daily Cards
+- [ ] Recommendation
+- [ ] Notification (Deadline | Scheduled)
 
